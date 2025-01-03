@@ -161,6 +161,8 @@ extension HTTPConnection {
             return address
         case .unix(let path):
             return path
+        @unknown default:
+            return "unknown"
         }
     }
 }

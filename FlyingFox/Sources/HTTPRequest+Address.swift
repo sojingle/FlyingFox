@@ -65,6 +65,8 @@ public extension HTTPRequest.Address {
             return .ip6(ip, port: port)
         case let .unix(path):
             return .unix(path)
+        @unknown default:
+            return .unix("unknown")
         }
     }
 }

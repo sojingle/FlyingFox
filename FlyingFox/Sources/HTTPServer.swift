@@ -376,6 +376,7 @@ extension Logging {
             }
         case let .unix(path):
             comps.append("path: \(path)")
+        @unknown default: break
         }
         return comps.joined(separator: " ")
     }
